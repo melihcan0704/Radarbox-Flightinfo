@@ -32,9 +32,9 @@ class aircraft_scrape:
                 # Removing custom website function window.init() so it appears as a JSON body.
                 script_tag2 = script_tag[2].text.replace('window.init(', '').replace(')', '')
             except Exception as e:
-                print('Status Code: 'r.status_code)
-                raise ('Request Failed: ',e)
-        
+                print(f'Status Code: {r.status_code}')
+                raise Exception('Request Failed: ', e)
+
         # JSON parsing for the flights table.
         json_parse = json.loads(script_tag2).get('current')  # json body of the last completed or live flight.
         return json_parse

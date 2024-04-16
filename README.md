@@ -3,9 +3,9 @@
 ## Examples & Output:
 
 ```python
-import ac_parser
+import rbparser
 
-acinfo=ac_parser.aircraft_scrape()
+acinfo=rbparser.aircraft_scrape()
 
 ```
 
