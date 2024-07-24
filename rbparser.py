@@ -100,10 +100,11 @@ class aircraft_scrape:
         self.sitrep=flight_info.get('statusLabel')['text']
         self.distance=flight_info.get('distance')
         self.progress=flight_info.get('progress')
+        self.mode_s=flight_info.get('ms')
         return (
         self.reg,self.ac_type,self.flight_no,self.airline,self.status,self.dep_date,self.est_deptime,self.act_deptime,self.org_airport,
 self.org_city,self.org_country,self.arr_date,self.est_arrtime,self.act_arrtime,self.arr_airport,self.arr_city,self.arr_country,
-self.future,self.org_temp,self.org_sky_cover,self.dst_temp,self.dst_sky_cover,self.altitude,self.distance)
+self.future,self.org_temp,self.org_sky_cover,self.dst_temp,self.dst_sky_cover,self.altitude,self.distance,self.mode_s)
         
     def report_status(self, tail):
         result = {}  # Initialize an empty dictionary
