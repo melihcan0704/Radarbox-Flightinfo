@@ -101,10 +101,34 @@ class aircraft_scrape:
         self.distance=flight_info.get('distance')
         self.progress=flight_info.get('progress')
         self.mode_s=flight_info.get('ms')
-        return (
-        self.reg,self.ac_type,self.flight_no,self.airline,self.status,self.dep_date,self.est_deptime,self.act_deptime,self.org_airport,
-self.org_city,self.org_country,self.arr_date,self.est_arrtime,self.act_arrtime,self.arr_airport,self.arr_city,self.arr_country,
-self.future,self.org_temp,self.org_sky_cover,self.dst_temp,self.dst_sky_cover,self.altitude,self.distance,self.mode_s)
+        
+        return {
+        'reg': self.reg,
+        'ac_type': self.ac_type,
+        'flight_no': self.flight_no,
+        'airline': self.airline,
+        'status': self.status,
+        'dep_date': self.dep_date,
+        'est_deptime': self.est_deptime,
+        'act_deptime': self.act_deptime,
+        'org_airport': self.org_airport,
+        'org_city': self.org_city,
+        'org_country': self.org_country,
+        'arr_date': self.arr_date,
+        'est_arrtime': self.est_arrtime,
+        'act_arrtime': self.act_arrtime,
+        'arr_airport': self.arr_airport,
+        'arr_city': self.arr_city,
+        'arr_country': self.arr_country,
+        'future': self.future,
+        'org_temp': self.org_temp,
+        'org_sky_cover': self.org_sky_cover,
+        'dst_temp': self.dst_temp,
+        'dst_sky_cover': self.dst_sky_cover,
+        'altitude': self.altitude,
+        'distance': self.distance,
+        'mode_s': self.mode_s
+    }
         
     def report_status(self, tail):
         result = {}  # Initialize an empty dictionary
